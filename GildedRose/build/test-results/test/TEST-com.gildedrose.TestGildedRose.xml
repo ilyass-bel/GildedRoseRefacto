@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.TestGildedRose" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-10-10T12:48:45" hostname="LAPTOP-IJUNU5KP" time="0.007">
+<testsuite name="com.gildedrose.TestGildedRose" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-10-10T16:08:11" hostname="LAPTOP-IJUNU5KP" time="0.014">
   <properties/>
-  <testcase name="ObjectTestSulfuras()" classname="com.gildedrose.TestGildedRose" time="0.003"/>
+  <testcase name="ObjectTestSulfuras()" classname="com.gildedrose.TestGildedRose" time="0.007"/>
   <testcase name="ObjectTestBackstage()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
-  <testcase name="ObjectTestConjured()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
-  <testcase name="OtherObjectTest()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
+  <testcase name="ObjectTestConjured()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
+  <testcase name="OtherObjectTest()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
   <testcase name="ObjectTestAged()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
