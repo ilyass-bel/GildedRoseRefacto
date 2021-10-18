@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="GildedRose/src/main/java"/>
+	<classpathentry kind="src" path="GildedRose/src/test/java"/>
+	<classpathentry kind="lib" path="GildedRose/build/libs/gilded-rose-kata-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="lib" path="GildedRose/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/jacocoagent.jar"/>
+	<classpathentry kind="lib" path="GildedRose/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="GildedRose/bin/main"/>
+</classpath>
