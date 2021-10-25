@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.gildedrose.TestGildedRose" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-10-10T16:08:11" hostname="LAPTOP-IJUNU5KP" time="0.014">
+<testsuite name="com.gildedrose.TestGildedRose" tests="9" skipped="0" failures="0" errors="0" timestamp="2021-10-18T09:42:50" hostname="LAPTOP-IJUNU5KP" time="0.028">
   <properties/>
-  <testcase name="ObjectTestSulfuras()" classname="com.gildedrose.TestGildedRose" time="0.007"/>
-  <testcase name="ObjectTestBackstage()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
+  <testcase name="ObjectTestSulfuras()" classname="com.gildedrose.TestGildedRose" time="0.006"/>
+  <testcase name="ObjectTestBackstageQualityIncrease()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
   <testcase name="ObjectTestConjured()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
-  <testcase name="OtherObjectTest()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
-  <testcase name="ObjectTestAged()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
+  <testcase name="OtherObjectTest()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
+  <testcase name="ObjectTestBackstageQualityMax()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
+  <testcase name="ObjectTestAgedQualityIncrease()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
+  <testcase name="ObjectTestAgedAddQualityWhenExpired()" classname="com.gildedrose.TestGildedRose" time="0.001"/>
+  <testcase name="ToStringTest()" classname="com.gildedrose.TestGildedRose" time="0.013"/>
+  <testcase name="ObjectTestBackstageQualityNull()" classname="com.gildedrose.TestGildedRose" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
