@@ -1,82 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GildedRose.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">gilded-rose-kata</a> &gt; <a href="index.source.html" class="el_package">com.gildedrose</a> &gt; <span class="el_source">GildedRose.java</span></div><h1>GildedRose.java</h1><pre class="source lang-java linenums">package com.gildedrose;
 
 class GildedRose {
+    public static final String SULFURAS = &quot;Sulfuras, Hand of Ragnaros&quot;;
+    public static final String AGED = &quot;Aged Brie&quot;;
+    public static final String BACKSTAGE = &quot;Backstage passes to a TAFKAL80ETC concert&quot;;
+    public static final String CONJURED = &quot;Conjured&quot;;
     Item[] items;
 
-<span class="fc" id="L6">    public GildedRose(Item[] items) {</span>
-<span class="fc" id="L7">        this.items = items;</span>
-<span class="fc" id="L8">    }</span>
+<span class="fc" id="L10">    public GildedRose(Item[] items) {</span>
+<span class="fc" id="L11">        this.items = items;</span>
+<span class="fc" id="L12">    }</span>
 
     private void addQuality(Item item){
-<span class="fc bfc" id="L11" title="All 2 branches covered.">        if (item.quality &lt; 50) {</span>
-<span class="fc" id="L12">            item.quality += 1;</span>
+<span class="fc bfc" id="L15" title="All 2 branches covered.">        if (item.quality &lt; 50) {</span>
+<span class="fc" id="L16">            item.quality += 1;</span>
         }
-<span class="fc" id="L14">    }</span>
+<span class="fc" id="L18">    }</span>
+
 
     private void decreaseQuality(Item item){
-<span class="fc bfc" id="L17" title="All 2 branches covered.">        if (item.quality &gt; 0) {</span>
-<span class="fc" id="L18">            item.quality -= 1;</span>
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (item.quality &gt; 0) {</span>
+<span class="fc" id="L23">            item.quality -= 1;</span>
         }
-<span class="fc bfc" id="L20" title="All 2 branches covered.">        if (item.sellIn &lt; 0) {</span>
-<span class="fc" id="L21">            item.quality -= 1;</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">        if (item.sellIn &lt; 0) {</span>
+<span class="fc" id="L26">            item.quality -= 1;</span>
         }
-<span class="fc" id="L23">    }</span>
+<span class="fc" id="L28">    }</span>
 
     private void HandleQualityIfSellin(Item item){
-<span class="fc bfc" id="L26" title="All 2 branches covered.">        if (item.sellIn &lt; 11) {</span>
-<span class="fc" id="L27">            addQuality(item);</span>
+<span class="fc bfc" id="L31" title="All 2 branches covered.">        if (item.sellIn &lt; 11) {</span>
+<span class="fc" id="L32">            addQuality(item);</span>
         }
-<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (item.sellIn &lt; 6) {</span>
-<span class="fc" id="L30">            addQuality(item);</span>
+<span class="fc bfc" id="L34" title="All 2 branches covered.">        if (item.sellIn &lt; 6) {</span>
+<span class="fc" id="L35">            addQuality(item);</span>
         }
-<span class="fc" id="L32">    }</span>
+<span class="fc" id="L37">    }</span>
 
     private void reinstateQualityToZero(Item item){
-<span class="fc bfc" id="L35" title="All 2 branches covered.">        if (item.sellIn &lt; 0) {</span>
-<span class="fc" id="L36">            item.quality = 0;</span>
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        if (item.sellIn &lt; 0) {</span>
+<span class="fc" id="L41">            item.quality = 0;</span>
         }
-<span class="fc" id="L38">    }</span>
+<span class="fc" id="L43">    }</span>
 
     private void addQualityWhenExpired(Item item){
-<span class="fc bfc" id="L41" title="All 2 branches covered.">        if(item.sellIn &lt; 0){</span>
-<span class="fc" id="L42">            addQuality(item);</span>
+<span class="fc bfc" id="L46" title="All 2 branches covered.">        if(item.sellIn &lt; 0){</span>
+<span class="fc" id="L47">            addQuality(item);</span>
         }
-<span class="fc" id="L44">    }</span>
+<span class="fc" id="L49">    }</span>
 
     public void updateQuality() {
-<span class="fc bfc" id="L47" title="All 2 branches covered.">        for (Item item : items) {</span>
-
-<span class="fc bfc" id="L49" title="All 2 branches covered.">            if (item.name.equals(&quot;Sulfuras, Hand of Ragnaros&quot;)) {</span>
-<span class="fc" id="L50">                continue;</span>
-            }
-
-<span class="fc bfc" id="L53" title="All 2 branches covered.">            if(item.name.equals(&quot;Aged Brie&quot;)){</span>
-<span class="fc" id="L54">                addQuality(item);</span>
-<span class="fc" id="L55">                item.sellIn -= 1;</span>
-<span class="fc" id="L56">                addQualityWhenExpired(item);</span>
-<span class="fc" id="L57">                continue;</span>
-            }
-
-<span class="fc bfc" id="L60" title="All 2 branches covered.">            if(item.name.equals(&quot;Backstage passes to a TAFKAL80ETC concert&quot;)){</span>
-<span class="fc" id="L61">                addQuality(item);</span>
-
-<span class="fc" id="L63">                HandleQualityIfSellin(item);</span>
-
-<span class="fc" id="L65">                item.sellIn -= 1;</span>
-<span class="fc" id="L66">                reinstateQualityToZero(item);</span>
-<span class="fc" id="L67">                continue;</span>
-            }
-
-<span class="fc bfc" id="L70" title="All 2 branches covered.">            if(item.name.equals(&quot;Conjured&quot;)){</span>
-<span class="fc" id="L71">                decreaseQuality(item);</span>
-<span class="fc" id="L72">                decreaseQuality(item);</span>
-<span class="fc" id="L73">                item.sellIn -= 1;</span>
-<span class="fc" id="L74">                continue;</span>
-            }
-
-<span class="fc" id="L77">            item.sellIn -= 1;</span>
-<span class="fc" id="L78">            decreaseQuality(item);</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">        for (Item item : items) {</span>
+<span class="fc" id="L53">            updateItemQuality(item);</span>
         }
-<span class="fc" id="L80">    }</span>
+<span class="fc" id="L55">    }</span>
+
+    private void updateItemQuality(Item item){
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (item.name.equals(SULFURAS)) {</span>
+<span class="fc" id="L59">            return;</span>
+        }
+
+<span class="fc bfc" id="L62" title="All 2 branches covered.">        if(item.name.equals(AGED)){</span>
+<span class="fc" id="L63">            addQuality(item);</span>
+<span class="fc" id="L64">            item.sellIn -= 1;</span>
+<span class="fc" id="L65">            addQualityWhenExpired(item);</span>
+<span class="fc" id="L66">            return;</span>
+        }
+
+<span class="fc bfc" id="L69" title="All 2 branches covered.">        if(item.name.equals(BACKSTAGE)){</span>
+<span class="fc" id="L70">            addQuality(item);</span>
+<span class="fc" id="L71">            HandleQualityIfSellin(item);</span>
+<span class="fc" id="L72">            item.sellIn -= 1;</span>
+<span class="fc" id="L73">            reinstateQualityToZero(item);</span>
+<span class="fc" id="L74">            return;</span>
+        }
+
+<span class="fc bfc" id="L77" title="All 2 branches covered.">        if(item.name.equals(CONJURED)){</span>
+<span class="fc" id="L78">            decreaseQuality(item);</span>
+<span class="fc" id="L79">            decreaseQuality(item);</span>
+<span class="fc" id="L80">            item.sellIn -= 1;</span>
+<span class="fc" id="L81">            return;</span>
+        }
+
+<span class="fc" id="L84">        item.sellIn -= 1;</span>
+<span class="fc" id="L85">        decreaseQuality(item);</span>
+<span class="fc" id="L86">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,6 +1,10 @@
 package com.gildedrose;
 
 class GildedRose {
+    public static final String SULFURAS = "Sulfuras, Hand of Ragnaros";
+    public static final String AGED = "Aged Brie";
+    public static final String BACKSTAGE = "Backstage passes to a TAFKAL80ETC concert";
+    public static final String CONJURED = "Conjured";
     Item[] items;
 
     public GildedRose(Item[] items) {
@@ -12,6 +16,7 @@ class GildedRose {
             item.quality += 1;
         }
     }
+
 
     private void decreaseQuality(Item item){
         if (item.quality > 0) {
@@ -45,37 +50,38 @@ class GildedRose {
 
     public void updateQuality() {
         for (Item item : items) {
-
-            if (item.name.equals("Sulfuras, Hand of Ragnaros")) {
-                continue;
-            }
-
-            if(item.name.equals("Aged Brie")){
-                addQuality(item);
-                item.sellIn -= 1;
-                addQualityWhenExpired(item);
-                continue;
-            }
-
-            if(item.name.equals("Backstage passes to a TAFKAL80ETC concert")){
-                addQuality(item);
-
-                HandleQualityIfSellin(item);
-
-                item.sellIn -= 1;
-                reinstateQualityToZero(item);
-                continue;
-            }
-
-            if(item.name.equals("Conjured")){
-                decreaseQuality(item);
-                decreaseQuality(item);
-                item.sellIn -= 1;
-                continue;
-            }
-
-            item.sellIn -= 1;
-            decreaseQuality(item);
+            updateItemQuality(item);
         }
+    }
+
+    private void updateItemQuality(Item item){
+        if (item.name.equals(SULFURAS)) {
+            return;
+        }
+
+        if(item.name.equals(AGED)){
+            addQuality(item);
+            item.sellIn -= 1;
+            addQualityWhenExpired(item);
+            return;
+        }
+
+        if(item.name.equals(BACKSTAGE)){
+            addQuality(item);
+            HandleQualityIfSellin(item);
+            item.sellIn -= 1;
+            reinstateQualityToZero(item);
+            return;
+        }
+
+        if(item.name.equals(CONJURED)){
+            decreaseQuality(item);
+            decreaseQuality(item);
+            item.sellIn -= 1;
+            return;
+        }
+
+        item.sellIn -= 1;
+        decreaseQuality(item);
     }
 }
